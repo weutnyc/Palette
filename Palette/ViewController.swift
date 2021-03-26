@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var paletteView: UIView!
     @IBOutlet var redLable: UILabel!
     @IBOutlet var greenLable: UILabel!
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         paletteView.layer.cornerRadius = 10
     }
-
+    
     override func viewWillLayoutSubviews() {
         paletteView.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
     }
@@ -36,20 +36,11 @@ class ViewController: UIViewController {
     
     @IBAction func greenSliderAction() {
         greenLable.text = String(format: "%.2f", greenSlider.value)
-      
-        
-        
     }
     
     @IBAction func blueSliderAction() {
         blueLable.text = String(format: "%.2f", blueSlider.value)
-        
-        
-        
-        }
-    
-    
-    
+    }
 }
 
 
