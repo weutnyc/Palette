@@ -22,9 +22,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        paletteView.layer.cornerRadius = 10
-        
         redLable.text = String(redSlider.value)
         greenLable.text = String(greenSlider.value)
         blueLable.text = String(blueSlider.value)

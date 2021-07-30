@@ -22,6 +22,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Bf-OH-Cr8" secondAttribute="height" multiplier="97:32" id="HXm-WC-a1f"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-qd-u22">
                                 <rect key="frame" x="20" y="222.33333333333334" width="350" height="30"/>
