@@ -22,6 +22,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Bf-OH-Cr8" secondAttribute="height" multiplier="97:32" id="HXm-WC-a1f"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-qd-u22">
                                 <rect key="frame" x="20" y="222.33333333333334" width="350" height="30"/>
@@ -47,7 +52,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="z6L-MK-Mwf">
                                         <rect key="frame" x="107.33333333333336" y="0.0" width="244.66666666666663" height="31"/>
                                         <connections>
-                                            <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yMg-Bg-OOB"/>
+                                            <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="hIO-qP-ZMR"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -76,7 +81,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-54-5jC">
                                         <rect key="frame" x="109.33333333333336" y="0.0" width="242.66666666666663" height="31"/>
                                         <connections>
-                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="hYb-ZO-04S"/>
+                                            <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="9NR-ps-k6I"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -105,7 +110,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="abd-8x-wPD">
                                         <rect key="frame" x="107.33333333333336" y="0.0" width="244.66666666666663" height="31"/>
                                         <connections>
-                                            <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="cUv-cH-HEr"/>
+                                            <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="btd-dK-G4N"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -130,12 +135,12 @@
                     </view>
                     <connections>
                         <outlet property="blueLable" destination="Jgi-5z-u22" id="EOI-2a-S7R"/>
-                        <outlet property="blueSlider" destination="abd-8x-wPD" id="WN8-lk-gbu"/>
+                        <outlet property="blueSlider" destination="abd-8x-wPD" id="syz-2Z-UMV"/>
                         <outlet property="greenLable" destination="vhY-9S-rRd" id="GAn-U6-0OG"/>
-                        <outlet property="greenSlider" destination="QNU-54-5jC" id="Hnn-IC-3u9"/>
+                        <outlet property="greenSlider" destination="QNU-54-5jC" id="gjW-LD-3cU"/>
                         <outlet property="paletteView" destination="3Bf-OH-Cr8" id="bUR-Qv-C3u"/>
                         <outlet property="redLable" destination="82k-x1-wTr" id="W8b-eB-SQ4"/>
-                        <outlet property="redSlider" destination="z6L-MK-Mwf" id="XXG-zt-TKT"/>
+                        <outlet property="redSlider" destination="z6L-MK-Mwf" id="4vx-vV-cLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -22,33 +22,42 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        paletteView.layer.cornerRadius = 10
-        
-        redLable.text = String(redSlider.value)
-        greenLable.text = String(greenSlider.value)
-        blueLable.text = String(blueSlider.value)
+        setColor()
+        setValue(for: redLable, greenLable, blueLable)
     }
     
-    override func viewWillLayoutSubviews() {
+    @IBAction func redSliderAction(_ sender: UISlider) {
+        setColor()
+        
+        switch sender {
+        case redSlider: setValue(for: redLable)
+        case greenSlider: setValue(for: greenLable)
+        default: setValue(for: blueLable)
+        }
+    }
+    
+    private func setColor() {
         paletteView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1.0
+            blue: CGFloat(greenSlider.value),
+            alpha: 1
         )
     }
     
-    @IBAction func redSliderAction() {
-        redLable.text = String(format: "%.2f", redSlider.value)
+    private func setValue(for labels: UILabel...) {
+        labels.forEach {
+            label in
+            switch label {
+            case redLable: label.text = string(from: redSlider)
+            case greenLable: label.text = string(from: greenSlider)
+            default: label.text = string(from: blueSlider)
+            }
+        }
     }
     
-    @IBAction func greenSliderAction() {
-        greenLable.text = String(format: "%.2f", greenSlider.value)
-    }
-    
-    @IBAction func blueSliderAction() {
-        blueLable.text = String(format: "%.2f", blueSlider.value)
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
 
