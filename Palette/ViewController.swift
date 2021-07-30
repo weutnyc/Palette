@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         paletteView.backgroundColor = UIColor(
-            displayP3Red: CGFloat(redSlider.value),
+            red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1.0
